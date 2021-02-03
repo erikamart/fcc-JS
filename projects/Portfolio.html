@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link for font awesome icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Link for google font style -->
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed" rel="stylesheet"> 
+  <!-- Bootstrap & jquery cdn links -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>FCC Personal Portfolio</title>
+
+<style>
+  /*Specifications for entire page view. No margin necessary */
+  .main-box {
+    padding: 0px 50px 20px 50px;
+  }
+  body {
+    color: #F3f3f3;
+		font-size: 1.80rem;
+    font-family: 'Cabin+Condensed', sans-serif;
+    position: relative;
+  }
+
+	body::before {
+	content: '';
+	position: fixed;
+	z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+	background: #33cccc;
+  background-image: linear-gradient(
+	0deg, rgba(255,255,255, 0), rgba(51, 204, 204, 1)), url(https://images.pexels.com/photos/532173/pexels-photo-532173.jpeg?auto=compress&cs=tinysrgb&h=650&w=940);
+	background-size: cover;
+	background-position: center;
+}
+
+  #welcome-section {
+    padding-top: 10px; padding-bottom: 10px; height:auto;color: #fff; width: 100%;
+  height: 100vh;
+  }
+  #projects {
+    padding-top: 10px; padding-bottom: 10px; height:auto;color: #fff;
+  }
+  #contact {
+    padding-top: 10px; padding-bottom: 10px; height:auto;color: #fff;
+  }
+
+  .sectionTitles {
+    text-decoration: underline;
+  }
+  nav {
+    margin-bottom: 50px;
+  }
+  .hdrSpace {
+    padding-top: 100px;
+  }
+  /* Subheader spacing from below header line */
+  .subHeader {
+    padding: 10px 0px 20px 0px;
+  }
+  /* Button spacing */
+  .btnSpace {
+    padding: 20px 0px 20px 0px;
+  }
+  /* all font sizes for entire page */
+  .bodySize {
+    font-size: 1.2em;
+  }
+  /* dimensions for headshot photo */
+  img {
+    float: right;
+    max-height: 250px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+  a {
+    color: #F3f3f3;
+  }
+
+	@media (min-width: 500px) {
+  .project-tile img {
+    max-width: 100%;
+		max max-height: 100vh;
+  	}
+	}
+  /* dimensions for project thumbnail images */
+  .project-tile {
+    width: 50%;
+  }
+  .project-tile img {
+    max-width: 50%;
+    height: auto;
+  }
+</style>
+</head>
+<body class="main-box" data-spy="scroll" data-target="#navbar" data-offset="50">   
+  <nav id="navbar" class="navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand">My Portfolio</a>
+      </div>
+      <div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#welcome-section">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div> <!-- end of div with #myNavbar -->
+      </div> <!-- end of div containing div above -->
+    </div> <!-- end of container-fluid -->
+  </nav>
+
+
+
+  <div id="welcome-section" class="container-fluid">
+    <div class="page-header text-center hdrSpace">
+			<h1>Achieve, Advance, Arrange </h1>
+    </div>
+    <h2 class="text-center subHeader">Letting imagination run into existence.</h2>
+
+    <div class="row btnSpace">
+      <div class="col-xs-4">
+        <a id="profile-link" href="https://github.com/erikamart" target="_blank" class="btn btn-block btn-default" role="button"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+      </div>
+      <div class="col-xs-4">
+        <a id="profile-link" href="#" target="_blank" class="btn btn-block btn-default" role="button"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+      </div>
+      <div class="col-xs-4">
+        <a id="profile-link" href="#" target="_blank" class="btn btn-block btn-default" role="button"><i class="fa fa-free-code-camp" aria-hidden="true"></i> FCC</a>
+      </div>
+    </div> <!-- end of buttons row div -->
+  </div> <!-- end of container-fluid div -->
+
+
+  <div id="welcome-section" class="container-fluid">
+    <div class="bodySize">
+      <h2 class="sectionTitles">About</h2>
+      <p> <img src="https://images.pexels.com/photos/1715092/pexels-photo-1715092.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Me in hardhat" style="max-width:25%"> 
+        Engineer.  Results-oriented, utilizing 9 years of extensive technical background, field experience, and customer support. Experienced in research, design, analysis, deployment, and continued product support. Recognized for strong ability to identify trends, develop competitive strategies, and execute customized projects.
+        <ul>
+          <li>Development Software: Visual Studio, MySQL Workbench, WSL. </li>
+          <li>Program Languages and Frameworks: JavaScript, PHP, C++, VB, HTML, CSS, MySQL, jQuery, Bootstrap3</li>
+          <li>Exposure to: Java, VBA, Python</li>
+        </ul>
+      </p>
+    </div> <!-- end of About section div -->
+  </div> <!-- end of container-fluid div -->
+
+
+
+  <div id="projects" class="container-fluid">
+    <div class="bodySize">
+      <h2 class="sectionTitles">Projects</h2>
+      <p class="project-header">Click below to see my projects.</p>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="thumbnail project-tile">
+            <a href="#" target="_blank">
+              <img src="https://www.biography.com/.image/t_share/MTE1ODA0OTcxMjQwMzU5NDM3/tech-giants-11-raw.jpg" alt="Marie Curie" style="width:80%">
+              <div class="caption">
+                <p>HTML only: Bio on Madame Curie.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail project-tile">
+            <a href="#" target="_blank">
+              <img src="#" alt="JS Project" style="width:100%">
+              <div class="caption">
+                <p>Lorem ipsum donec id elit non mi.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail project-tile">
+            <a href="#" target="_blank">
+              <img src="#" alt="PHP Project" style="width:100%">
+              <div class="caption">
+                <p>Lorem ipsum donec id elit non mi.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="thumbnail project-tile">
+            <a href="#" target="_blank">
+              <img src="#" alt="PHP Project" style="width:100%">
+              <div class="caption">
+                <p>Lorem ipsum donec id elit non mi.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end of Portfolio section div -->
+  </div> <!-- end of container-fluid div -->
+
+
+
+  <div id="contact" class="container-fluid">
+    <div class="bodySize">
+      <h2 class="sectionTitles">Contact</h2>
+      <address>
+        <a href="mailto:#">@ Send me email</a>
+      </address>
+    </div> <!-- end of Contact section div -->
+  </div> <!-- end of container-fluid div -->
+
+<!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+
+</html>

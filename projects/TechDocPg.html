@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google font style -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin+Condensed">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" type="text/css" href="ProductCSS.css"> -->
+  <title>Technical Docs</title>
+<style>
+html, body {
+  color: #666699;
+  font-size: 1rem;
+  font-family: 'Cabin+Condensed', sans-serif;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+  0deg, rgba(255,255,255, 0), rgba(51, 204, 204, 1))
+}
+
+#navbar {
+  position: fixed;
+  min-width: 300px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: #666699;
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 300px;
+  padding: 25px;
+  margin-bottom: 100px;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+height: 88%;
+padding: 0;
+overflow-y: auto;
+overflow-x: hidden;
+}
+
+#navbar li {
+  color: #666699;
+  width: 100%;
+  border-top: 2px solid;
+  list-style: none;
+  position: relative;
+}
+
+#navbar a {
+  color: dimgray;
+  display: block;
+  padding: 10px 25px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  /* smaller screens */
+  #navbar ul {
+    border: 1px solid;
+    height: 225px;
+  }
+
+  #navbar {
+    background-color: #33cccc;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 280px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 280px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    min-width: 100px;
+  }
+}
+
+section article {
+  margin: 10px;
+  font-size: 1em;
+}
+
+section li {
+  margin: 10px 0px 0px 10px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1;
+  background-color: #f3f3f3;
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+	<nav id="navbar">
+	<header>Technical Docs</header>
+		<ul>
+			<li><a class="nav-link" href="#introduction">Introduction</a></li>
+			<li><a class="nav-link" href="#what_you_should_already_know">What You Should Already Know</a></li>
+			<li><a class="nav-link" href="#bacon_ipsum_dolor">Bacon ipsum dolor</a></li>
+			<li><a class="nav-link" href="#hello_world">Hello World</a></li>
+			<li><a class="nav-link" href="#variables">Variables</a></li>
+		</ul>
+	</nav>
+<main id="main-doc">
+	<section class="main-section" id="introduction">
+    <header>Introduction</header>
+    <article>
+      <p>
+        Pig occaecat mollit biltong salami irure ullamco officia. Ad aute ham hock do salami dolore lorem in shoulder pork chop landjaeger consectetur excepteur veniam. Mollit eu incididunt qui veniam picanha cupidatat occaecat. Ut quis deserunt esse, in kielbasa jowl jerky tri-tip boudin consequat cillum. In alcatra jowl, nostrud deserunt dolor duis pork loin est reprehenderit sausage sed turkey. Picanha in tri-tip incididunt. Picanha proident shoulder flank cillum, swine fatback alcatra labore sint culpa velit.
+      </p>
+
+      <p>
+        Tri-tip non boudin sint in labore tempor rump. Pig aute t-bone, alcatra chislic filet mignon officia. Pork chop consectetur nostrud, tongue culpa rump swine ea cupim. Non enim prosciutto nostrud proident laborum. Magna filet mignon dolore sirloin tempor ground round. Beef ribs eiusmod ea hamburger buffalo.
+      </p>
+      <ul>
+        <li>
+          Bacon ipsum dolor amet ham mollit sausage est fatback velit quis alcatra meatball irure turkey excepteur duis sed. Picanha pork chop shankle tail. 
+        </li>
+        <li>
+          Bresaola nostrud enim, esse consectetur shankle doner landjaeger chicken exercitation cupim andouille. Dolore ad in, corned beef fugiat eiusmod cupidatat t-bone ball tip.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="what_you_should_already_know">
+    <header>What you should already know</header>
+    <article>
+      <p>Non strip steak corned beef lorem tri-tip reprehenderit, fatback buffalo id ut.</p>
+
+      <ul>
+        <li>
+          Strip steak meatball bresaola velit proident eu. Commodo eiusmod salami, dolore doner porchetta turkey nostrud exercitation meatball quis ut tenderloin pariatur brisket.
+        </li>
+        <li>Picanha aliquip capicola, ad flank magna ball tip labore doner pastrami tongue buffalo.</li>
+        <li>
+          Prosciutto shank deserunt aute shoulder meatloaf.
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="main-section" id="bacon_ipsum_dolor">
+    <header>Bacon ipsum dolor</header>
+    <article>
+      <p>
+        Bacon ipsum dolor amet rump pork chop short loin, doner leberkas commodo ut beef ribs sausage ex bresaola non nisi aliquip. Magna veniam ex anim salami ad turducken, ball tip ham hock eu sausage. Brisket anim turkey fugiat, doner turducken venison pancetta consequat leberkas chuck tri-tip jowl jerky aliqua. Tri-tip id est, qui in ham hock buffalo duis reprehenderit shank veniam shoulder. Prosciutto swine brisket officia, landjaeger short loin proident ball tip. Esse landjaeger doner in, pig officia pork.
+      </p>
+      <code>
+        var y = 4
+      </code>
+      <p>
+        Venison tongue ut fatback, in ham eu picanha commodo frankfurter labore tail eiusmod. Tenderloin pork loin consequat, corned beef nisi cillum mollit brisket lorem aute drumstick spare ribs. Laborum chicken shank biltong, dolore deserunt beef drumstick anim spare ribs tail sunt nulla. Laborum nulla chislic exercitation. T-bone cupim pancetta, nisi picanha ham short ribs sint qui. Ham short loin aliqua, jowl officia prosciutto qui.
+      </p>
+      <code>
+        let z = 1
+      </code>
+      <p>
+        Bacon ipsum dolor amet consequat meatball officia deserunt cupidatat pork belly ad ea in reprehenderit sint dolore capicola fugiat drumstick. Beef nisi laboris rump. Frankfurter leberkas salami, boudin pig occaecat in brisket. In pork tenderloin pariatur, tongue est fugiat filet mignon.
+      </p>
+    </article>
+  </section>
+  <section class="main-section" id="hello_world">
+    <header>Hello world</header>
+    <article>
+      Cillum excepteur qui, kevin incididunt nulla veniam shank reprehenderit nostrud. Short loin meatball ipsum pork spare ribs pig sed consectetur andouille veniam nulla reprehenderit:
+      <code>
+        Eu lorem ground round, capicola;
+      </code>
+      <p>
+        Alcatra beef ribs tail, dolor occaecat bresaola voluptate duis doner drumstick pastrami pork deserunt ham qui. Flank exercitation pastrami, deserunt meatball sirloin shankle landjaeger eiusmod spare ribs ut ball tip biltong meatloaf. Doner deserunt duis, fugiat bresaola sirloin proident tongue cupidatat. 
+      </p>
+      <code>
+        if (turkey) { let y = turkey }
+      </code>
+      Eu lorem ground round, capicola pariatur pastrami chicken meatloaf tri-tip leberkas buffalo in deserunt commodo enim.!
+    </article>
+  </section>
+  <section class="main-section" id="variables">
+    <header>Variables</header>
+    <p>
+      Cillum anim mollit nulla, in tail excepteur fatback irure turkey aute pork eu pig buffalo. Eiusmod laboris corned beef ut nisi labore, dolore pork belly reprehenderit commodo. 
+    </p>
+    <code>
+      tempor buffalo sunt.
+    </code>
+    <p>
+      Bacon ipsum dolor amet irure est elit short ribs shank adipisicing consectetur bresaola cupim landjaeger jerky. Alcatra beef ribs tail, dolor occaecat bresaola voluptate duis doner drumstick pastrami pork deserunt ham qui. Flank exercitation pastrami, deserunt meatball sirloin shankle landjaeger eiusmod spare ribs ut ball tip biltong meatloaf.
+    </p>
+    <p>
+      Doner deserunt duis, fugiat bresaola sirloin proident tongue cupidatat. Ham hock elit bresaola tail velit, beef frankfurter burgdoggen tongue duis. Irure minim turducken consequat, pariatur ham hock kevin pancetta ipsum ribeye meatloaf in. Eiusmod tempor shoulder hamburger landjaeger.
+    </p>
+  </section>
+</main>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

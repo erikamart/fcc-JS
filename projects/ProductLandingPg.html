@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <!-- Google font style -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin+Condensed">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" type="text/css" href="ProductCSS.css"> -->
+
+  <title>Product Pg</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #f3f3f3;
+  font-size: 1.10rem;
+  font-family: 'Cabin+Condensed', sans-serif;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+	background: #33cccc;
+  background-image: linear-gradient(
+	0deg, rgba(255,255,255, 0), rgba(51, 204, 204, 1)), url(https://images.pexels.com/photos/532173/pexels-photo-532173.jpeg?auto=compress&cs=tinysrgb&h=650&w=940);
+	background-size: cover;
+	background-position: center;
+}
+
+.btn {
+  padding: 0 5px;
+  height: 35px;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: flex;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #33cccc;
+  padding-right: 30px;
+  padding-left: 60px;
+  padding-top: 20px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    margin-top: 5px;
+    position: relative;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+}
+
+nav > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+
+#content-section {
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover, .btn:hover {
+  color: #f3f3f3;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 100px;
+}
+
+#intro > h1 {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+#intro input[type='email'] {
+  max-width: 295px;
+  width: 100%;
+  padding: 5px;
+}
+
+#intro input[type='submit'] {
+  max-width: 155px;
+  width: 100%;
+  height: 35px;
+  margin: 15px 0;
+}
+
+#intro input[type='submit']:hover , button:hover {
+  background-color: #666699;
+  transition: background-color 1s;
+}
+
+@media (max-width: 600px) {
+  #intro {
+    margin-top: 220px;
+  }
+}
+
+#features {
+  margin-top: 30px;
+}
+
+#features .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 20vw;
+  color: #666699;
+}
+
+@media (max-width: 550px) {
+  #features .icon {
+    display: none;
+  }
+}
+
+#features .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+
+@media (max-width: 550px) {
+  #features .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+
+@media (max-width: 650px) {
+  #features {
+    margin-top: 0;
+  }
+}
+
+#examples {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#examples > iframe {
+  max-width: 600px;
+  width: 100%;
+}
+
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  color: black;
+}
+
+.product > .level {
+  background-color: #666699;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+  color: black;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+}
+
+@media (max-width: 600px) {
+  #pricing {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div id="content-section">
+  <header id="header">
+		<div class="logo">
+      <div>
+        <img id="header-img" src="#" alt="A Logo" style="max-width: 40px;"/>
+      </div>
+      <div>
+        <h6 style="padding-left: 20px;">myexamplessite.com</h6>
+      </div>
+		</div>
+		<nav id="nav-bar">
+      <ul>
+        <li><a class="nav-link" href="#features">Features</a></li>
+        <li><a class="nav-link" href="#examples">Examples</a></li>
+        <li><a class="nav-link" href="#pricing">Pricing</a></li>
+      </ul>
+    </nav>
+	</header>
+	<main role="main" class="pt-2">
+	<div class="container">
+		<section id="intro">
+			<h1>Handcrafted And Designed Just For You</h1>
+			<form id="form" action="https://www.freecodecamp.com/email-submit">
+				<input
+					name="email"
+					id="email"
+					type="email"
+					placeholder="Enter your email address"
+					required
+				/>
+				<input id="submit" type="submit" value="Get Started" class="btn" />
+			</form>
+		</section>
+    <section id="features">
+      <div class="grid">
+        <div class="icon"><i class="fas fa-3x fa-hat-wizard"></i></div>
+        <div class="desc">
+          <h2>Premium features</h2>
+          <p>
+            Our knitted hats are super soft yarn that is sourced locally. You pick the design or let us pick for you after a few short questions about your likes.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="icon"><i class="fab fa-3x fa-usps"></i></div>
+        <div class="desc">
+          <h2>Fast Shipping</h2>
+          <p>
+            Flat rate $4.99 fee. We make sure you recieve your order as soon as we have finished
+            making it.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="icon">
+          <i class="fas fa-3x fa-check-double" aria-hidden="true"></i>
+        </div>
+        <div class="desc">
+          <h2>Quality Assurance</h2>
+          <p>
+            We will ensure that your order is made per your specifications and we will double check before shipping.
+          </p>
+        </div>
+      </div>
+		</section>
+		<section id="examples">
+			<iframe id="video" width="660" height="515" src="https://www.youtube.com/embed/deVZ2Sc0Zoo" 
+			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen>
+			</iframe>
+    </section>
+    <section id="pricing">
+      <div class="product" id="standard">
+        <div class="level">STANDARD BEANIE</div>
+        <h2>$10</h2>
+        <ol>
+          <li>Choose up to 2 colors.</li>
+          <li>Choose warmth level.</li>
+          <li>Choose Lined or not.</li>
+          <li>Choose material type.</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+      <div class="product" id="slouch">
+        <div class="level">SLOUCHY BEANIE</div>
+        <h2>$15</h2>
+        <ol>
+          <li>Choose up to 3 colors.</li>
+          <li>Choose warmth level.</li>
+          <li>Choose material type.</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+      <div class="product" id="mega">
+        <div class="level">MEGA BEANIE</div>
+        <h2>$20</h2>
+        <ol>
+          <li>Choose up to 4 colors.</li>
+          <li>Choose warmth level.</li>
+          <li>Choose Lined or not.</li>
+          <li>Choose material type.</li>
+          <li>Choose a top ball or not.</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+		</section>
+	</div>
+	</main>
+		<footer class="page-footer font-small pt-5">
+			<div class="footer-copyright text-center py-3">
+					&copy;
+					<script type="text/javascript">
+						var d = new Date()
+						document.write(d.getFullYear())
+					</script> myexamplessite.com
+			</div>
+    </footer>
+</div>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
